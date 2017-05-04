@@ -1,0 +1,13 @@
+Source: ros-jade-collada-parser
+Section: misc
+Priority: extra
+Maintainer: Chris Lalancette <clalancette@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), collada-dom-dev, liburdfdom-headers-dev, ros-jade-catkin, ros-jade-class-loader, ros-jade-roscpp, ros-jade-urdf, ros-jade-urdf-parser-plugin
+Homepage: http://ros.org/wiki/collada_parser
+Standards-Version: 3.9.2
+
+Package: ros-jade-collada-parser
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, collada-dom-dev, liburdfdom-headers-dev, ros-jade-class-loader, ros-jade-roscpp, ros-jade-urdf-parser-plugin
+Description: This package contains a C++ parser for the Collada robot description format.
+ The parser reads a Collada XML robot description, and creates a C++ URDF model. Although it is possible to directly use this parser when working with Collada robot descriptions, the preferred user API is found in the urdf package.
