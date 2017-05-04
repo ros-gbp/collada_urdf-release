@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 2.8.12)
 project(collada_urdf)
 
 find_package(catkin REQUIRED COMPONENTS angles collada_parser resource_retriever urdf geometric_shapes tf cmake_modules)
@@ -9,6 +9,12 @@ catkin_package(
   LIBRARIES ${PROJECT_NAME}
   INCLUDE_DIRS include
   DEPENDS angles collada_parser resource_retriever urdf geometric_shapes tf)
+
+include(CheckCXXCompilerFlag)
+check_cxx_compiler_flag(-std=c++11 HAS_STD_CPP11_FLAG)
+if(HAS_STD_CPP11_FLAG)
+  add_compile_options(-std=c++11)
+endif()
 
 include_directories(include)
 
@@ -54,13 +60,13 @@ include_directories(${TinyXML_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS})
 link_directories(${catkin_LIBRARY_DIRS})
 
 add_library(${PROJECT_NAME} src/collada_urdf.cpp)
-target_link_libraries(${PROJECT_NAME} ${TinyXML_LIBRARIES} ${catkin_LIBRARIES} ${COLLADA_DOM_LIBRARIES}  
+target_link_libraries(${PROJECT_NAME} ${TinyXML_LIBRARIES} ${catkin_LIBRARIES} ${COLLADA_DOM_LIBRARIES}
   ${Boost_LIBRARIES} ${ASSIMP_LIBRARIES})
 set_target_properties(${PROJECT_NAME} PROPERTIES COMPILER_FLAGS "${ASSIMP_CXX_FLAGS} ${ASSIMP_CFLAGS_OTHER}")
-set_target_properties(${PROJECT_NAME} PROPERTIES LINK_FLAGS "${ASSIMP_LINK_FLAGS}") 
+set_target_properties(${PROJECT_NAME} PROPERTIES LINK_FLAGS "${ASSIMP_LINK_FLAGS}")
 
 add_executable(urdf_to_collada src/urdf_to_collada.cpp)
-target_link_libraries(urdf_to_collada ${catkin_LIBRARIES} ${COLLADA_DOM_LIBRARIES}  
+target_link_libraries(urdf_to_collada ${catkin_LIBRARIES} ${COLLADA_DOM_LIBRARIES}
   ${Boost_LIBRARIES} ${PROJECT_NAME})
 
 add_executable(collada_to_urdf src/collada_to_urdf.cpp)
@@ -69,8 +75,8 @@ set_target_properties(collada_to_urdf PROPERTIES COMPILER_FLAGS "${ASSIMP_CXX_FL
 set_target_properties(collada_to_urdf PROPERTIES LINK_FLAGS "${ASSIMP_LINK_FLAGS}")
 
 if(CATKIN_ENABLE_TESTING)
-  catkin_add_gtest(test_collada_writer test/test_collada_urdf.cpp)
-  target_link_libraries(test_collada_writer ${PROJECT_NAME} ${catkin_LIBRARIES} ${COLLADA_DOM_LIBRARIES}  
+  catkin_add_gtest(test_collada_urdf test/test_collada_urdf.cpp WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/test)
+  target_link_libraries(test_collada_urdf ${PROJECT_NAME} ${catkin_LIBRARIES} ${COLLADA_DOM_LIBRARIES}
     ${Boost_LIBRARIES})
 endif()
 
