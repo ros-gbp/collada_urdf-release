@@ -1,0 +1,176 @@
+ros-lunar-collada-urdf (1.12.10-0stretch) stretch; urgency=high
+
+  * Moved collada_parser and collada_urdf to new repository
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 04 May 2017 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.12.9-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Wed, 26 Apr 2017 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.12.8-0stretch) stretch; urgency=high
+
+  * Remove old gazebo settings.
+    Based on an initial patch from YoheiKakiuchi, just totally
+    remove old Gazebo 1.0 settings, as they are never used and
+    almost certainly will never be used.
+  * add Chris and Shane as maintainers (#184 <https://github.com/ros/robot_model/issues/184>)
+  * Do a few cleanup tasks in collada_urdf (#183 <https://github.com/ros/robot_model/issues/183>)
+    * Style cleanup within collada_urdf.
+    No functional change, just style.
+    * Make sure to quit out of urdf_to_collada when invalid file is found.
+    Otherwise, we'll just end up segfaulting later on.
+    * Re-enable one of the collada-urdf tests.
+    In point of fact, we delete the rest of the tests because
+    they don't make much sense anymore.  Just enable this one
+    for now; we'll enable further ones in the future.
+    * Add in another test for collada_urdf.
+  * remove divide by 2 when writing boxes to collada format (#133 <https://github.com/ros/robot_model/issues/133>)
+  * Contributors: Chris Lalancette, Jackie Kay, William Woodall
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 27 Mar 2017 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.12.7-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 26 Jan 2017 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.12.6-0stretch) stretch; urgency=high
+
+  * Now using ``urdf::*ShredPtr`` instead of ``boost::shared_ptr`` (#144 <https://github.com/ros/robot_model/issues/144>)
+  * Contributors: Jochen Sprickerhof
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Wed, 04 Jan 2017 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.12.5-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 27 Oct 2016 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.12.4-0stretch) stretch; urgency=high
+
+  * Use the C++11 standard (#145 <https://github.com/ros/robot_model/issues/145>)
+  * Contributors: William Woodall
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 23 Aug 2016 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.12.3-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Fri, 10 Jun 2016 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.12.2-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 12 Apr 2016 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.12.1-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sun, 10 Apr 2016 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.11.8-0stretch) stretch; urgency=high
+
+  * Removed pcre hack for newer released collada-dom.
+  * Contributors: Kei Okada
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Fri, 11 Sep 2015 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.11.7-0stretch) stretch; urgency=high
+
+  * Fixed #89 <https://github.com/ros/robot_model/issues/89>
+    Accomplished by loading libpcrecpp before collada-dom.
+  * Contributors: Kei Okada, William Woodall
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Wed, 22 Apr 2015 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.11.6-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sun, 30 Nov 2014 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.11.5-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 24 Jul 2014 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.11.4-0stretch) stretch; urgency=high
+
+  * moving to new dependency for urdfdom and urdfdom_headers. https://github.com/ros/rosdistro/issues/4633
+  * Fix clash with assimp 3.1 in CMake.
+  * Contributors: Benjamin Chrétien, Tully Foote
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 07 Jul 2014 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.11.3-0stretch) stretch; urgency=high
+
+  * Merge pull request #69 <https://github.com/ros/robot_model/issues/69> from YoheiKakiuchi/indigo-devel-store-original-mesh-name
+    storing original mesh file name and location
+  * storing original mesh file name and location
+  * Contributors: Ioan A Sucan, YoheiKakiuchi
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 24 Jun 2014 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.11.2-0stretch) stretch; urgency=high
+
+  * use new  urdfdom_headers API
+  * Contributors: Ioan Sucan
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sat, 22 Mar 2014 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.11.1-0stretch) stretch; urgency=high
+
+  * Use assimp-dev dep for building
+  * Contributors: Scott K Logan
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 20 Mar 2014 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.11.0-0stretch) stretch; urgency=high
+
+  * Use VERSION_LESS instead of STRLESS
+    The version comparison routines were added in cmake 2.8.0
+  * Fix export API detection (for assimp < 2.0.885)
+    It looks like this API was added in Assimp 2.0.885:
+    https://github.com/assimp/assimp/commit/ae23c03bd9a0b5f1227dc0042fd98f7206c770a8
+  * Invert Assimp version detect logic for greater accuracy
+  * Updated Assimp defines to be more flexible
+    This commit is a follow-up to 85b20197671e142044e471df603debd0faf08baf
+    Why was export.h removed from assimp < 3.0.0?
+  * Better feature detection for assimp version
+    The unified headers were introduced in Assimp 2.0.1150, so checking for Assimp 3.0.0 is not quite the best solution.
+    See https://github.com/assimp/assimp/commit/6fa251c2f2e7a142bb861227dce0c26362927fbc
+  * Contributors: Scott K Logan
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Fri, 21 Feb 2014 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.10.18-0stretch) stretch; urgency=high
+
+  * add DEPENDS for kdl_parser
+  * Contributors: Ioan Sucan
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Wed, 04 Dec 2013 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.10.16-0stretch) stretch; urgency=high
+
+  * check for CATKIN_ENABLE_TESTING
+  * fix for compiling collada_to_urdf, add dependency to tf
+  * add collada_to_urdf.cpp for converting collada file to urdf file
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 18 Nov 2013 00:00:00 -0000
+
+ros-lunar-collada-urdf (1.10.15-0stretch) stretch; urgency=high
+
+  * fix #30 <https://github.com/ros/robot_model/issues/30>
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sat, 17 Aug 2013 00:00:00 -0000
+
+
