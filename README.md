@@ -1,3 +1,28 @@
+## collada_urdf (melodic) - 1.12.11-0
+
+The packages in the `collada_urdf` repository were released into the `melodic` distro by running `/usr/bin/bloom-release collada_urdf --track melodic --rosdistro melodic` on `Tue, 17 Apr 2018 14:54:34 -0000`
+
+These packages were released:
+- `collada_parser`
+- `collada_urdf`
+
+Version of package(s) in repository `collada_urdf`:
+
+- upstream repository: https://github.com/ros/collada_urdf.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `1.12.11-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.4`
+- catkin_pkg version: `0.4.1`
+- rosdep version: `0.12.2`
+- rosdistro version: `0.6.8`
+- vcstools version: `0.1.40`
+
+
 ## collada_urdf (lunar) - 1.12.11-0
 
 The packages in the `collada_urdf` repository were released into the `lunar` distro by running `/usr/bin/bloom-release collada_urdf --track lunar --rosdistro lunar` on `Tue, 17 Apr 2018 14:51:21 -0000`
