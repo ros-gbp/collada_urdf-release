@@ -1,14 +1,9 @@
 cmake_minimum_required(VERSION 2.8.12)
 project(collada_urdf)
 
-find_package(catkin REQUIRED COMPONENTS angles collada_parser resource_retriever urdf geometric_shapes tf cmake_modules)
+find_package(catkin REQUIRED COMPONENTS angles cmake_modules collada_parser geometric_shapes resource_retriever rosconsole urdf)
 
-find_package(TinyXML REQUIRED)
-
-catkin_package(
-  LIBRARIES ${PROJECT_NAME}
-  INCLUDE_DIRS include
-  DEPENDS angles collada_parser resource_retriever urdf geometric_shapes tf)
+find_package(urdfdom_headers REQUIRED)
 
 include(CheckCXXCompilerFlag)
 check_cxx_compiler_flag(-std=c++11 HAS_STD_CPP11_FLAG)
@@ -50,17 +45,26 @@ endif()
 find_package(Boost REQUIRED COMPONENTS system filesystem program_options)
 include_directories(${Boost_INCLUDE_DIR})
 
+find_package(Eigen3 REQUIRED)
+
 find_package(COLLADA_DOM 2.3 COMPONENTS 1.5)
 if( COLLADA_DOM_FOUND )
   include_directories(${COLLADA_DOM_INCLUDE_DIRS})
   link_directories(${COLLADA_DOM_LIBRARY_DIRS})
 endif()
 
-include_directories(${TinyXML_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS})
+catkin_package(
+  LIBRARIES ${PROJECT_NAME}
+  INCLUDE_DIRS include
+  CATKIN_DEPENDS collada_parser geometric_shapes resource_retriever rosconsole urdf
+  DEPENDS ASSIMP COLLADA_DOM urdfdom_headers
+)
+
+include_directories(${catkin_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIRS})
 link_directories(${catkin_LIBRARY_DIRS})
 
 add_library(${PROJECT_NAME} src/collada_urdf.cpp)
-target_link_libraries(${PROJECT_NAME} ${TinyXML_LIBRARIES} ${catkin_LIBRARIES} ${COLLADA_DOM_LIBRARIES}
+target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${COLLADA_DOM_LIBRARIES}
   ${Boost_LIBRARIES} ${ASSIMP_LIBRARIES})
 set_target_properties(${PROJECT_NAME} PROPERTIES COMPILER_FLAGS "${ASSIMP_CXX_FLAGS} ${ASSIMP_CFLAGS_OTHER}")
 set_target_properties(${PROJECT_NAME} PROPERTIES LINK_FLAGS "${ASSIMP_LINK_FLAGS}")
