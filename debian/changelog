@@ -1,0 +1,167 @@
+ros-melodic-collada-parser (1.12.12-0stretch) stretch; urgency=high
+
+  * add exec_depend to package.xml of collada_parser for loading by pluginlib (#27 <https://github.com/ros/collada_urdf/issues/27>)
+  * Contributors: Yohei Kakiuchi
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 08 May 2018 00:00:00 -0000
+
+ros-melodic-collada-parser (1.12.11-0stretch) stretch; urgency=high
+
+  * Collada cleanup dependencies (#26 <https://github.com/ros/collada_urdf/issues/26>)
+  * update links now that this is in its own repo
+  * Make CMakeLists.txt depend on collada-dom version 2.4. (#11 <https://github.com/ros/collada_urdf/issues/11>)
+  * Contributors: Chris Lalancette, Mikael Arguedas
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 17 Apr 2018 00:00:00 -0000
+
+ros-melodic-collada-parser (1.12.10-0stretch) stretch; urgency=high
+
+  * Moved collada_parser and collada_urdf to new repository
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 04 May 2017 00:00:00 -0000
+
+ros-melodic-collada-parser (1.12.9-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Wed, 26 Apr 2017 00:00:00 -0000
+
+ros-melodic-collada-parser (1.12.8-0stretch) stretch; urgency=high
+
+  * add Chris and Shane as maintainers (#184 <https://github.com/ros/robot_model/issues/184>)
+  * fix missed mandatory -std=c++11 flag (#181 <https://github.com/ros/robot_model/issues/181>)
+    collada_parser,kdl_parser,urdf: add c++11 flag,
+    collada_parser: replace typeof with ansi __typeof__
+    builded/tested on gentoo
+    Thanks den4ix for the contribution!
+  * Contributors: Denis Romanchuk, William Woodall
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 27 Mar 2017 00:00:00 -0000
+
+ros-melodic-collada-parser (1.12.7-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 26 Jan 2017 00:00:00 -0000
+
+ros-melodic-collada-parser (1.12.6-0stretch) stretch; urgency=high
+
+  * Now using ``urdf::*ShredPtr`` instead of ``boost::shared_ptr`` (#144 <https://github.com/ros/robot_model/issues/144>)
+  * Contributors: Jochen Sprickerhof
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Wed, 04 Jan 2017 00:00:00 -0000
+
+ros-melodic-collada-parser (1.12.5-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 27 Oct 2016 00:00:00 -0000
+
+ros-melodic-collada-parser (1.12.4-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 23 Aug 2016 00:00:00 -0000
+
+ros-melodic-collada-parser (1.12.3-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Fri, 10 Jun 2016 00:00:00 -0000
+
+ros-melodic-collada-parser (1.12.2-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 12 Apr 2016 00:00:00 -0000
+
+ros-melodic-collada-parser (1.12.1-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sun, 10 Apr 2016 00:00:00 -0000
+
+ros-melodic-collada-parser (1.11.8-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Fri, 11 Sep 2015 00:00:00 -0000
+
+ros-melodic-collada-parser (1.11.7-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Wed, 22 Apr 2015 00:00:00 -0000
+
+ros-melodic-collada-parser (1.11.6-0stretch) stretch; urgency=high
+
+  * fix rotation of joint axis when oriantation between parent link and child link is differ
+  * Contributors: YoheiKakiuchi
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sun, 30 Nov 2014 00:00:00 -0000
+
+ros-melodic-collada-parser (1.11.5-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 24 Jul 2014 00:00:00 -0000
+
+ros-melodic-collada-parser (1.11.4-0stretch) stretch; urgency=high
+
+  * collada_parser: add extract actuators, fix for using nominal torque
+  * moving to new dependency for urdfdom and urdfdom_headers. https://github.com/ros/rosdistro/issues/4633
+  * Contributors: Tully Foote, YoheiKakiuchi
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 07 Jul 2014 00:00:00 -0000
+
+ros-melodic-collada-parser (1.11.3-0stretch) stretch; urgency=high
+
+  * update usage of urdfdom_headers for indigo/trusty
+  * Contributors: William Woodall
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 24 Jun 2014 00:00:00 -0000
+
+ros-melodic-collada-parser (1.11.2-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sat, 22 Mar 2014 00:00:00 -0000
+
+ros-melodic-collada-parser (1.11.1-0stretch) stretch; urgency=high
+
+  * remove visual and collision if there is no vertices
+  * do not use visual and collision group
+  * fix debug message
+  * fix problem of root coordinates
+  * Contributors: YoheiKakiuchi
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 20 Mar 2014 00:00:00 -0000
+
+ros-melodic-collada-parser (1.11.0-0stretch) stretch; urgency=high
+
+  * fix, joint axis should be rotated depend on local coords
+  * fix overwriting velocity limit
+  * Contributors: YoheiKakiuchi
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Fri, 21 Feb 2014 00:00:00 -0000
+
+ros-melodic-collada-parser (1.10.18-0stretch) stretch; urgency=high
+
+  * add DEPENDS for kdl_parser
+  * Contributors: Ioan Sucan
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Wed, 04 Dec 2013 00:00:00 -0000
+
+ros-melodic-collada-parser (1.10.16-0stretch) stretch; urgency=high
+
+  * fix for using collada_parser_plugin
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 18 Nov 2013 00:00:00 -0000
+
+ros-melodic-collada-parser (1.10.15-0stretch) stretch; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sat, 17 Aug 2013 00:00:00 -0000
+
+
