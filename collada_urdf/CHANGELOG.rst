@@ -2,6 +2,9 @@
 Changelog for package collada_urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.12.12 (2018-05-08)
+--------------------
+
 1.12.11 (2018-04-17)
 --------------------
 * Collada cleanup dependencies (`#26 <https://github.com/ros/collada_urdf/issues/26>`_)
