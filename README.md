@@ -1,3 +1,28 @@
+## collada_urdf (noetic) - 1.12.13-1
+
+The packages in the `collada_urdf` repository were released into the `noetic` distro by running `/usr/bin/bloom-release --track noetic --rosdistro noetic collada_urdf` on `Tue, 14 Jul 2020 17:55:26 -0000`
+
+These packages were released:
+- `collada_parser`
+- `collada_urdf`
+
+Version of package(s) in repository `collada_urdf`:
+
+- upstream repository: https://github.com/ros/collada_urdf.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `1.12.13-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.7`
+- catkin_pkg version: `0.4.22`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.2`
+- vcstools version: `0.1.42`
+
+
 ## collada_urdf (melodic) - 1.12.13-1
 
 The packages in the `collada_urdf` repository were released into the `melodic` distro by running `/usr/bin/bloom-release --track melodic --rosdistro melodic collada_urdf` on `Tue, 14 Jul 2020 17:50:51 -0000`
