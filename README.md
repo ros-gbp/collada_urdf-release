@@ -1,3 +1,28 @@
+## collada_urdf (kinetic) - 1.12.13-1
+
+The packages in the `collada_urdf` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release --track kinetic --rosdistro kinetic collada_urdf` on `Tue, 14 Jul 2020 17:48:00 -0000`
+
+These packages were released:
+- `collada_parser`
+- `collada_urdf`
+
+Version of package(s) in repository `collada_urdf`:
+
+- upstream repository: https://github.com/ros/collada_urdf.git
+- release repository: https://github.com/ros-gbp/collada_urdf-release.git
+- rosdistro version: `1.12.12-0`
+- old version: `1.12.12-0`
+- new version: `1.12.13-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.7`
+- catkin_pkg version: `0.4.22`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.2`
+- vcstools version: `0.1.42`
+
+
 ## collada_urdf (melodic) - 1.12.12-0
 
 The packages in the `collada_urdf` repository were released into the `melodic` distro by running `/usr/bin/bloom-release collada_urdf --track melodic --rosdistro melodic` on `Tue, 08 May 2018 13:47:06 -0000`
